@@ -1,0 +1,157 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* o bootstraop utiliza a classe .row para fazer um linha */
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p,li {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Barra de navegação */
+header, .navbar {
+    background-color: #353D41;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 75px;
+}
+
+/* link */
+.navbar-brand {
+    padding: 0;
+    color: #FFF;
+}
+
+/*quando passar o mouse no link e ficar branco */
+.navbar-brand:hover {
+    color: #FFF;
+}
+
+
+#navbar-links a {
+    color: #FFF;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+
+/* Slider */
+/* deixar sem espaçamento dos lados do carrossel */
+.container-fluid {
+    padding: 0;
+}
+
+/* para o carrossel pegar 90% da altura da tela */
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 90vh;
+}
+
+/* colocar a legenda do carrossel mais pra cima  */
+#mainSlider .carousel-caption {
+    top: 30%
+}
+
+/* mudar o h2 */
+#mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+/* mudar o p */
+#mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: #FFF;
+}
+
+
+#main-btn {
+    background-color: #65DAF9;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+#main-btn:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: transparent;
+    border-color: #65DAF9;
+}
+
+/* traços do slide quando estiver no slide o traço do slide fica azul */
+.carousel-indicators .active {
+    background-color: #65DAF9;
+}
+
+/* Sobre a empresa */
+
+#about-area{
+    background-color: #F9F9F9;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 0.3rem;
+    background-color: #444;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* para desgrudar as linhas da lista */
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: #65DAF9;
+    margin-right: 15px;
+}
+
+
+
+
+
