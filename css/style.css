@@ -151,7 +151,35 @@ header, .navbar {
     margin-right: 15px;
 }
 
+ /* Serviços (rodapé) */
+ .service-box {
+    text-align: center;
+    margin-bottom: 50px;
+ }
 
+  /* a transition e para quando tocar com o mouse o icon ir ficando azul durante 5 segundos  */
+ .service-box i, .service-box h4 {
+    transition: .5s;
+ }
 
+ .service-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+ }
 
+ .service-box h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+ }
 
+ /* a seta serve pra ir diretamente no i e h4 */
+ .service-box:hover > i,  .service-box:hover > h4 {
+    color: #65DAF9;
+ }
+
+ @media (min-width: 2000px) {
+.col-xll-8 {
+    width: 66.66666667%;
+}
+ }
