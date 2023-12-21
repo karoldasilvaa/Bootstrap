@@ -183,3 +183,23 @@ header, .navbar {
     width: 66.66666667%;
 }
  }
+
+ /* parallax dos dados com os circulos  */
+
+ .circle-box div {
+    padding: 0 40px;
+ }
+
+ /* numero dos circulos */
+ .progressbar-text {
+    font-weight: bold;
+    font-size: 32px;
+ }
+
+ /* todos os paragrafos do data area  */
+ #data_area p {
+    color: #FFF;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+ }
