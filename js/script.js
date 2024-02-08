@@ -1,8 +1,8 @@
 // Vai iniciar esse script apenas quando esse documento estiver pronto, basicamente vai esperar o html carregar todo
 
-$(document).ready(function() {
+$(document).ready(function(){ 
 
-// Progress bar (Estrutura do circulo de animação)   
+    // Progress bar (Estrutura do circulo de animação)   
     // criarCirculo(document.getElementById("circleA"), 60, "#64DAF9", 1400);
     // criarCirculo(document.getElementById("circleB"), 70, "#FFFF00", 1600);
     // criarCirculo(document.getElementById("circleC"), 80, "#FF00FF", 1800);
@@ -34,11 +34,12 @@ $(document).ready(function() {
             duracao: 2200
         }
     ]
+ 
 
     for(var i = 0; i< config.length; i++) {
         criarCirculo(config[i].container, config[i].numero, config[i].cor, config[i].duracao);
     }
-
+ 
     function criarCirculo(container, numero, cor, duracao){
         // progress bar criado no css e o circle e do javascript
         let circle = new ProgressBar.Circle(container, {
@@ -51,7 +52,6 @@ $(document).ready(function() {
             // para começar com o cinza e terminar no azul
             from: {color: '#AAA'},
             to: {color: cor},
-
             // fazer passo da animação
             step: function(state, circle) {
                 // state e circle faz parte da biblioteca para criar o circulo animado
@@ -61,7 +61,8 @@ $(document).ready(function() {
                 let value = Math.round(circle.value() * numero);
                 // mas o numero final é esse aqui
                 circle.setText(value);
-            }
+
+            }    
         });
     
         // iniciando a animação dos circulos quando o usuario chega no elemento, pegar a posição do elemento o id da div 
@@ -80,9 +81,57 @@ $(document).ready(function() {
 
                 // Nao vai repetir a animação
                 stop = 1;
-            } 
+            }
 
         });
+    }   
+  
+    // Filtro dos botao de projetos
+    $('.filter-btn').on('click', function() {
+        // identificar os botões o id em que foi clicado, type é o tipó do botão
+        let type = $(this).attr('id'); 
+
+        // identificar as box(caixas) que tem no projeto
+        let boxes = $('.project-box');
+
+        //remover a active do botao principal e adiciona no botão que foi clicado 
+        $('.main-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // para esconder as box(caixas) que nao quer que apareca quando clicar no tipo de botão, passar o tipo do botão (dsg-btn) e a variavel type
+        if (type == 'dev-btn') {
+            // passar a classe da imagem e a variavel boxes
+            cadaCaixa('dev', boxes);
+        } else if (type == 'dsg-btn') {
+            cadaCaixa('dsg', boxes);
+        } else if (type == 'seo-btn') {
+            cadaCaixa('seo', boxes);
+        }else {
+            cadaCaixa('all', boxes);
+        }
+
+
+    });
+
+    // função para escolher as caixas quando clica no botão
+
+    function cadaCaixa (type, boxes){
+        if (type == 'all') {
+            //se o tipo for all vai mostrar todas, fadeIn evento jquery que mostra todos os item que esta escondido pelo fade
+            $(boxes).fadeIn();
+        } else {
+            // each = todos (todos os boxes = caixas)
+            $(boxes).each(function() {
+            // passar por cada imagem if não tiver a classe do type que foi enviado se o botão que foi clicado não representa essa box (hasClass)
+                if (!$(this).hasClass(type)) {
+                    // se o type for diferte vai fazer um fadeOut = esconder em slow = devagar
+                    $(this).fadeOut('slow');
+                } else {
+                    //fadeIn = aparecer
+                    $(this).fadeIn();
+                }
+            });
+        }
     }
     
 });

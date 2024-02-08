@@ -82,7 +82,7 @@ header, .navbar {
 }
 
 
-#main-btn {
+.main-btn {
     background-color: #65DAF9;
     color: #FFF;
     text-transform: uppercase;
@@ -94,7 +94,7 @@ header, .navbar {
     transition: .5s;
 }
 
-#main-btn:hover {
+.main-btn:hover {
     text-decoration: none;
     color: #FFF;
     background-color: transparent;
@@ -178,12 +178,6 @@ header, .navbar {
     color: #65DAF9;
  }
 
- @media (min-width: 2000px) {
-.col-xll-8 {
-    width: 66.66666667%;
-}
- }
-
  /* parallax dos dados com os circulos  */
 
  .circle-box div {
@@ -197,9 +191,295 @@ header, .navbar {
  }
 
  /* todos os paragrafos do data area  */
- #data_area p {
+ #data-area p {
     color: #FFF;
     text-align: center;
     font-size: 26px;
     margin-top: 20px;
  }
+
+/* Parallax */
+ #data-area {
+    position:relative;
+    background-image:url('../img/cidadeparallax.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    }  
+
+/* Equipe */
+.card-body {
+    border: 1px solid #a09b9b41;
+    border-top: 0; 
+    text-align: center;
+    padding-top:25px;
+    padding-bottom: 25px;
+}
+
+.card-title  {
+    padding-bottom: 10px;
+}
+
+/* Trabalhe conosco */
+
+#apply-area {
+    height: 500px;
+}
+
+#apply-area .container-fluid, #apply-area .row {
+    height: 100%;
+}
+
+#apply-area .apply-box {
+    text-align: center;
+    padding: 70px 50px;
+}
+
+#company-img {
+    background-image:url('../img/empresa.jpg');
+    background-size:cover;
+    height: 100%;
+}
+
+#pattern-img h4, #pattern-img p {
+    color: #FFF;
+}
+
+#pattern-img h4 {
+    margin-top: 8%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#pattern-img p {
+    margin-bottom: 20px;
+}
+
+#apply-btn {
+    display: block;
+    height: auto;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: transparent;
+    border-color: #FFF;
+}
+
+#apply-btn:hover {
+    border-color: #65DAF9;
+    background-color: #65DAF9;
+}
+
+/* Parallax */
+#pattern-img {
+    position:relative;
+    background-image:url('../img/cidadeparallax.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    }  
+
+
+  /* Projetos   */
+
+  .project-box {
+    margin-bottom: 50px;
+  }
+
+  #filter-btn-box {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #portifolio-area .filter-btn {
+    color: #444;
+    border: 1px solid #444;
+    background-color: transparent;
+    /* para nao ser afetado pelos outros estilos que foi usada a classe */
+    text-transform: none;
+    margin: 0 15px;
+    min-width: 100px;
+    /* para o botão ficar do tamanho da letra */
+    width: auto;
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  #portifolio-area .filter-btn.active, #portifolio-area .filter-btn:hover {
+    color: #FFF;
+    background-color: #65DAF9;
+    border-color: #65DAF9;
+  }
+
+  /* adicionar email do usuario */
+  #news-area {
+    text-align: center;
+    background-color: #eeeded;
+  }
+
+  #news-area p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  /* junta os imputs no outro e adicionar radius em volta */
+  #email-input {
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #65DAF9;
+    /* deixar os inputs um do lado do outro */
+    display: inline; 
+    box-sizing: border-box;
+    width: 40%;
+    height: 40px;
+  }
+
+  #news-btn {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #65DAF9;
+    background-color: #65DAF9;
+    text-transform: uppercase;
+    margin-left: -130px;
+    color: #FFF;
+    height: 40px;
+    padding: 0 30px;
+    position: absolute;
+    /* animação d--morar 5 segundos para aparecer */
+    transition: .5s;
+  }
+
+  #news-btn:hover {
+    background-color: #FFF;
+    color: #65DAF9;
+  }
+
+  
+
+  /* Deseja fazer um orçamento */
+
+  #call-area {
+    background-color: #65DAF9;
+    text-transform: uppercase;
+  }
+
+  #call-area .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* alinhar tudo que tem na div */
+  #call-area .row {
+    display: block;
+    text-align:center;
+  }
+
+  #call-area p {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    /* deixar o texto e o input um do lado do outro */
+    display: inline;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  #call-area #call-btn {
+    background-color: #FFF;
+    color: #65DAF9;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    width: auto;
+    letter-spacing: 2px;
+  }
+
+     /* footer */
+
+     #contact-area {
+        text-align: center;
+     }
+
+     /* linha azul */
+     .contact-box {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #3EC1D5;
+     }
+
+     /* circulo dos icones */
+     .contact-box i {
+        color: #444;
+        border: solid 1px #444;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 24px;
+        margin-bottom: 20px;
+     }
+
+     .contact-box p {
+        font-size: 16px;
+     }
+     
+     .contact-title {
+        font-weight: bold;
+        color: #3EC1D5;
+     }
+
+     #msg-box p {
+        font-size: 22px;
+     }
+
+     #contact-form input[type="text"],  #contact-form input[type="email"], #contact-form textarea {
+        margin-bottom: 15px;
+        border-radius: 0;
+     }
+
+     #contact-form .main-btn {
+        width: 120px;
+        height: 50px;
+     }
+
+     #contact-form .main-btn:hover {
+        color: #3EC1D5;
+     }
+
+        /* Copy area 'Desenvolvido por hdc agency' */
+     #copy-area {
+        background-color: #F1F1F1;
+     }
+
+     #copy-area .container {
+        padding: 10px 0;
+        text-align: center;
+     }
+
+     #copy-area .container p {
+        margin-bottom: 0;
+     }
+
+     #copy-area .container a {
+        font-weight: bold;
+        color: #444;
+     }
+
+     #copy-area .container a:hover {
+        text-decoration: none;
+        color: #3EC1D5;
+     }
+
+        /* Responsive */
+
+        /* tela monitor de 2000px */
+     @media (min-width: 2000px) {
+        .col-xll-8 {
+            width: 66.66666667%;
+        }
+         }
