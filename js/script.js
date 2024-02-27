@@ -133,5 +133,50 @@ $(document).ready(function(){
             });
         }
     }
-    
+
+    // scroll para seções quando clicar no menu 
+    // criando variavel do menu
+    let navBtn = $('.nav-item');
+
+    let bannerSection = $('#mainSlider');
+    let aboutSection = $('#about-area');
+    let serviceSection = $('#services-area');
+    let teanSection = $('#team-area');
+    let portifolioSection = $('#portifolio-area');
+    let contactSection = $('#contact-area');
+
+    let scrollTo = '';
+
+    $(navBtn).click(function(){
+        // pegar o id 
+        let btnId = $(this).attr('id');
+        console.log(btnId);
+
+        if(btnId == 'about-menu') {
+            scrollTo = aboutSection;
+        }
+        else if(btnId == 'services-menu') {
+            scrollTo = serviceSection;
+        }
+        else if(btnId == 'services-menu') {
+            scrollTo = teanSection;
+        }
+        else if(btnId == 'services-menu') {
+            scrollTo = portifolioSection;
+        }
+        else if(btnId == 'services-menu') {
+            scrollTo = contactSection;
+        }
+        else{
+            scrollTo = bannerSection
+        }
+
+     // Para garantir que vai fazer o scroll
+        $([document.documentElement, document.body]).animate({
+        // scrolltpo: tipo da animação, 70: rait da barra de navegação
+        scrollTop: $(scrollTo).offset().top - 70
+        // 1500 dizer que essa animação demora 1500 segundos que é um segundo e meio
+    }, 1500);
+    });
+
 });
