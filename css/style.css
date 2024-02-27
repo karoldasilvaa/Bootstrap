@@ -487,78 +487,80 @@ header, .navbar {
     /* responsive tablet */
 
     /* para resolução de tablet quando chegar no maximo 768px vai ativar essa resolução */
-    @media(max-width: 768px){
+        @media(max-width: 768px){
 
-        /* geral */
-        /* tirar os espaços das divs para não ficar muitos espaço quando diminuir a tela */
-        .container {
-            padding: 20px 0;
+            /* geral */
+            /* tirar os espaços das divs para não ficar muitos espaço quando diminuir a tela */
+            .container {
+                padding: 20px 0;
+            }
+
+            /* Carrosel */
+            #mainSlider .carousel-inner, #mainSlider .carousel-item {
+                height: auto;
+            }
+            
+            #mainSlider .carousel-caption h2 {
+                font-size: 28px;
+            }
+
+            #mainSlider .carousel-caption p {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            .carousel-caption {
+                left: 10%;
+                right: 10%;
+            }
+
+            /* about (imagem da mesa que fica do lado do texto) */
+            #about-area img {
+                margin-top: 100px;
+            }
+
+            /* data (circulos que tem os numeros) */
+            .circle-box div {
+                padding: 0 10px;
+            }
+
+            #data-area p {
+                font-size: 16px;
+            }
+
+            /* tean (foto dos funcionarios) */
+            .card-title {
+                font-size: 14px;
+            }
+            
+            .card-text {
+                font-size: 12px;
+            }
+
+            /* apply (texto: gosta de desafios:) */
+            #apply-area .apply-box {
+                padding: 50px 25px;
+            }
+
+            /* news (paragrafo fique por dentro das novidades) */
+            #news-area p {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #email-input {
+                width: 70%;
+            }
+            
+            /* call-area (parte azul do arçamento) */
+            #call-area .container {
+                padding: 30px;
+            }
+
         }
 
-        /* Carrosel */
-        #mainSlider .carousel-inner, #mainSlider .carousel-item {
-            height: auto;
-        }
-        
-        #mainSlider .carousel-caption h2 {
-            font-size: 28px;
-        }
-
-        #mainSlider .carousel-caption p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        .carousel-caption {
-            left: 10%;
-            right: 10%;
-        }
-
-        /* about (imagem da mesa que fica do lado do texto) */
-        #about-area img {
-            margin-top: 100px;
-        }
-
-        /* data (circulos que tem os numeros) */
-        .circle-box div {
-            padding: 0 10px;
-        }
-
-        #data-area p {
-            font-size: 16px;
-        }
-
-        /* tean (foto dos funcionarios) */
-        .card-title {
-            font-size: 14px;
-        }
-        
-        .card-text {
-            font-size: 12px;
-        }
-
-        /* apply (texto: gosta de desafios:) */
-        #apply-area .apply-box {
-            padding: 50px 25px;
-        }
-
-        /* news (paragrafo fique por dentro das novidades) */
-        #news-area p {
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #email-input {
-            width: 70%;
-        }
-        
-        /* call-area (parte azul do arçamento) */
-        #call-area .container {
-            padding: 30px;
-        }
-
-        /* responsive celular */
+     /* responsive celular */
 
         /* carrossel */
         @media(max-width: 425px){
@@ -596,8 +598,51 @@ header, .navbar {
                 margin-bottom: 30px;
             }
 
+            /* circulo */
             .circle-box {
                 width: 50%;
             }
+
+            /* funcionarios */
+            #team-area .col-md-3 {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+
+            /* quando tiver no celular vai esconder a foto do predio e mostrar apenas do parallax */
+            #apply-area {
+                height: auto;
+            }
+
+            #company-img {
+                display: none;
+            }
+
+            /* filter (conheça nossos projetos) */
+            #portifolio-area .filter-btn {
+                margin-bottom: 20px;
+            }
+
+            .project-box {
+                width: 50%;
+            }
+
+            /* news */
+            #news-area .main-title {
+                font-size: 24px;
+            }
+
+            #news-area p {
+                font-size: 16px;
+            }
+
+            #email-input {
+                width: 80%;
+            }
+
+            #call-area p, #call-area #call-btn {
+                font-size: 14px;
+                letter-spacing: 0;
+                margin: 0;
+            }
         }
-    }
