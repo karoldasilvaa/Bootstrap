@@ -483,3 +483,121 @@ header, .navbar {
             width: 66.66666667%;
         }
          }
+
+    /* responsive tablet */
+
+    /* para resolução de tablet quando chegar no maximo 768px vai ativar essa resolução */
+    @media(max-width: 768px){
+
+        /* geral */
+        /* tirar os espaços das divs para não ficar muitos espaço quando diminuir a tela */
+        .container {
+            padding: 20px 0;
+        }
+
+        /* Carrosel */
+        #mainSlider .carousel-inner, #mainSlider .carousel-item {
+            height: auto;
+        }
+        
+        #mainSlider .carousel-caption h2 {
+            font-size: 28px;
+        }
+
+        #mainSlider .carousel-caption p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .carousel-caption {
+            left: 10%;
+            right: 10%;
+        }
+
+        /* about (imagem da mesa que fica do lado do texto) */
+        #about-area img {
+            margin-top: 100px;
+        }
+
+        /* data (circulos que tem os numeros) */
+        .circle-box div {
+            padding: 0 10px;
+        }
+
+        #data-area p {
+            font-size: 16px;
+        }
+
+        /* tean (foto dos funcionarios) */
+        .card-title {
+            font-size: 14px;
+        }
+        
+        .card-text {
+            font-size: 12px;
+        }
+
+        /* apply (texto: gosta de desafios:) */
+        #apply-area .apply-box {
+            padding: 50px 25px;
+        }
+
+        /* news (paragrafo fique por dentro das novidades) */
+        #news-area p {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #email-input {
+            width: 70%;
+        }
+        
+        /* call-area (parte azul do arçamento) */
+        #call-area .container {
+            padding: 30px;
+        }
+
+        /* responsive celular */
+
+        /* carrossel */
+        @media(max-width: 425px){
+            #mainSlider {
+                margin-top: 90px;
+            }
+
+            /* 
+            Onde esta os slides o bootstrap criou uma classe d none automticamente tem que tirar todas as classes d none para ficar os textos nos slides quando tiver em um celular */
+            #mainSlider .carousel-caption {
+                top: 5%;
+            }
+
+            #mainSlider .carousel-caption h2{
+               font-size: 18px;
+               margin-bottom: 40px;
+            }
+
+            /* quando for no celular esconder o paragrafo porque fica muito pouco espaço pra muita informação */
+            #mainSlider .carousel-caption p{
+                display: none;
+             }
+ 
+            .carousel-caption .main-btn {
+                font-size: 14px;
+            }
+
+            /* about */
+            .main-title {
+                font-size: 30px;
+            }
+
+            #about-area img {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .circle-box {
+                width: 50%;
+            }
+        }
+    }
